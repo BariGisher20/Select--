@@ -1,13 +1,13 @@
 import sqlalchemy
 from pprint import pprint
 
-db = 'postgresql://Eleonora:1108@localhost:5432/Task3'
+db = 'postgresql://Eleonora:1108@localhost:5432/S3'
 engine = sqlalchemy.create_engine(db)
 connection = engine.connect()
 
 res_1 = connection.execute("""
-    SELECT album_name, year FROM albums
-        WHERE year=2018;
+    SELECT album_name, release_year FROM albums
+        WHERE release_year=2018;
         """).fetchmany(10)
 
 res_2 = connection.execute("""
@@ -22,12 +22,12 @@ res_3 = connection.execute("""
             """).fetchall()
 
 res_4 = connection.execute("""
-    SELECT collection_name FROM collection
-        WHERE year BETWEEN 2018 AND 2020;
+    SELECT collection_name FROM collections
+        WHERE release_year BETWEEN 2018 AND 2020;
             """).fetchall()
 
 res_5 = connection.execute("""
-    SELECT name FROM artist
+    SELECT name FROM artists
         WHERE name NOT LIKE '%% %%';
             """).fetchall()
 
