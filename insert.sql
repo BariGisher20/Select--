@@ -83,5 +83,56 @@ values
 	(58, 'collection_8', 1987),
 	(59, 'collection_9', 2004);
 
+INSERT INTO artists_genres (id,genreid, artistid)
+values
+	(121,21, 11),
+	(122,22, 12),
+	(123,23, 12),
+	(124,24, 11),
+	(125,25, 11),
+	(126,26, 11),
+	(127,27, 14),
+	(128,28, 13),
+	(129,29, 15);
 
+INSERT INTO artists_albums (id, artistid, albumid)
+values
+	(121,31, 21),
+	(122,32, 22),
+	(123,33, 23),
+	(124,34, 24),
+	(125,35, 25),
+	(126,36, 26),
+	(127,37, 27),
+	(128,38, 28),
+	(129,39, 29);
 
+INSERT INTO tracks_collections (id, collectionid, trackid)
+values
+	(121,41, 51),
+	(122,42, 52),
+	(123,43, 53),
+	(124,44, 54),
+	(125,45, 55),
+	(126,46, 56),
+	(127,47, 57),
+	(128,48, 58),
+	(129,49, 59),
+	(130,410, 54),
+	(131,411, 55),
+	(132,412, 56),
+	(133,413, 57),
+	(134,414, 58),
+	(135,415, 59);
+
+INSERT INTO tracks_collections (id, collectionid, trackid)
+values
+	(136,415, 58);
+
+INSERT INTO artists_genres (id,genreid, artistid)
+values
+	(130,28, 14);
+
+INSERT INTO tracks (trackid, title, time, albumID)
+values
+	(416,'Колибри', 3.4, 33);
